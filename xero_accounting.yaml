@@ -8971,7 +8971,7 @@ paths:
                     TotalCostPool: 0.00
                     QuantityOnHand: 0.0000
                     QuantityAvailable: 0.0000
-                    QuantityOnBackorder: 0.0000
+                    QuantityOnBackOrder: 0.0000
                     IsSold: true
                     IsPurchased: true
     put:
@@ -9222,7 +9222,7 @@ paths:
                     TotalCostPool: 25000.00
                     QuantityOnHand: 10.0000
                     QuantityAvailable: 10.0000
-                    QuantityOnBackorder: 0.0000
+                    QuantityOnBackOrder: 0.0000
                     IsSold: true
                     IsPurchased: true
                     ValidationErrors: []
@@ -22684,16 +22684,16 @@ components:
           format: double
           x-is-money: true
         QuantityOnHand:
-          description: The quantity of the item on hand. This will be 0 if `QuantityOnBackorder` is greater than 0.
+          description: The quantity of the item on hand. This will be 0 if `QuantityOnBackOrder` is greater than 0.
           type: number
           format: double
           x-is-money: true
         QuantityAvailable:
-          description: The quantity of the item available. This is equal to `QuantityOnHand` - `QuantityOnBackorder`. This value will be negative if `QuantityOnBackorder` is greater than 0.
+          description: The quantity of the item available. This is equal to `QuantityOnHand` - `QuantityOnBackOrder`. This value will be negative if `QuantityOnBackOrder` is greater than 0.
           type: number
           format: double
           readOnly: true
-        QuantityOnBackorder:
+        QuantityOnBackOrder:
           description: The quantity of the item on backorder. This will be 0 if `QuantityOnHand` is greater than 0.
           type: number
           format: double
